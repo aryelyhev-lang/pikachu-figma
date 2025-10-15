@@ -1,5 +1,26 @@
-:root{
+:root {
     --primary-color: #F5CF06;
     --secundary-color: #8E4106;
     /* criando variaveis para guardar as cores da página */
+}
+
+body {
+    height: 100vh;
+    background-color: var(--primary-color);
+    /* usar -- para chamar a variavel que guarda a cor */
+    padding: 70px;
+    font-family: Righteous, sans-serif;
+    /* sans-sefif serve para caso se o sisterma nao encontrar a fonte escolhida ele substituira por qualquer uma */
+}
+
+header {
+    display: flex;
+    gap: 16px;
+    /* gap é o espacamento entre os filhos */
+    align-items: center;
+}
+
+header span {
+    font-size: 32px;
+    color: var(--secundary-color)
 }
