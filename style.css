@@ -17,18 +17,18 @@ body {
 
 header {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     /* gap é o espacamento entre os filhos */
     align-items: center;
 }
 
 header span {
     font-size: 32px;
-    color: var(--secundary-color)
+    color: var(--secundary-color);
 }
 
 main {
-    
+
     flex-grow: 1;
     /* flex grow se estica ao maximo sem espremer os outros filhos flex */
     display: flex;
@@ -36,24 +36,25 @@ main {
 }
 
 .sombra {
-    font-size: 500px;
+    font-size: 26vw;
     position: absolute;
     color: #ffffff55;
     z-index: -999;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -100%);
     /* left, top e transform centraliza um objeto que não possui um pai e esta como absolute, seja na frente ou atras de todos os objetos*/
 }
 
 h1 {
+    text-shadow: 0 00px 0 #000;
     flex-grow: 1;
-    font-size: 300px;
+    font-size: 20vw;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .conteiner {
@@ -62,19 +63,20 @@ h1 {
     justify-content: space-between;
     padding-bottom: 64px;
     align-items: flex-end;
-    
+
 }
 
 .pikachu {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: -50%, -50%;
+    transform: translate(-50%, -50%);
     z-index: 999;
 }
 
 footer {
-   background-color: aquamarine;
+    color: var(--secundary-color);
+    text-align: center;
 }
 
 .descricao h2 {
@@ -97,4 +99,59 @@ footer {
     align-items: center;
     font-size: 48px;
     color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .sombra {
+        transform: translate(-50%, -180%);
+    }
+
+    main {
+        justify-content: space-between;
+    }
+
+    h1 {
+        align-items: start;
+        transform: translateY(40%);
+        flex-grow: 0.8;
+
+    }
+
+    .conteiner {
+        flex-direction: column;
+        align-items: center;
+        padding: 0%;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    .descricao p {
+        display: none;
+    }
+    .sombra {
+        transform: translateY(-50%, -230%);
+    }
+
+    .pikachu {
+        height: 50vh;
+    }
+
+    .descricao h2{
+        font-size: 38px;
+    }
+
+    .conteiner a {
+        width: 100%;
+    }
+
 }
